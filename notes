@@ -1,0 +1,22 @@
+class MyException extends Exception{
+    public MyException(String m){
+        super(m);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+       int age =  12;
+       
+       try{
+           if(age<15){
+             throw new MyException("not valid"); 
+           }
+           
+       }
+       catch(MyException e){
+           System.out.println(e.getMessage());
+       }
+       
+      // System.out.println("Access Granted");
+    }
+}
